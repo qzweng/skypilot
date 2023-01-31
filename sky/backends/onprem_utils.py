@@ -258,6 +258,9 @@ def get_local_cluster_accelerators(
          {'K80': 2,},
         ]
     """
+    # <QIZHEN>: prevent _gather_cluster_accelerators() from requiring root
+    return [dict() for _ in ips]
+    # </QIZHEN>
     ssh_user = auth_config['ssh_user']
     ssh_key = auth_config['ssh_private_key']
     remote_resource_dir = os.path.dirname(_SKY_GET_ACCELERATORS_SCRIPT_PATH)
