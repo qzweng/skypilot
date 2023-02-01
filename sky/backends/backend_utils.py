@@ -88,6 +88,9 @@ WAIT_HEAD_NODE_IP_MAX_ATTEMPTS = 3
 # with no internet connection.
 # Refer to: https://stackoverflow.com/questions/3764291/how-can-i-see-if-theres-an-available-and-active-network-connection-in-python # pylint: disable=line-too-long
 _TEST_IP = 'https://8.8.8.8'
+# <QIZHEN> 8.8.8.8 is not always accessible from here
+_TEST_IP = 'https://berkeley.edu/'
+# </QIZHEN>
 
 # GCP has a 63 char limit; however, Ray autoscaler adds many
 # characters. Through testing, this is the maximum length for the Sky cluster
